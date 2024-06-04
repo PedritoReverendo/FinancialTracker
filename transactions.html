@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzas Personales</title>
+    <link rel="shorcut icon" href="./icon_img/pexels-karolina-grabowska-4386442.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/transactions.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+        
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto">
+            <h1 class="text-2xl">Finanzas Personales</h1>
+            <ul class="flex space-x-4">
+                <li><a href="index.html" class="hover:underline">Panel de Control</a></li>
+                <li><a href="transactions.html" class="hover:underline">Transacciones</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container mx-auto p-4">
+
+        <section class="bg-white p-6 rounded shadow-md">
+            <h2 class="text-xl font-bold mb-4">Transacciones:</h2>
+
+            <form id="transaction-form" class="mb-4">
+                <div class="grid grid-cols-4 gap-4">
+                    <input type="text" id="description" class="border p-2 rounded" placeholder="Descripcion">
+                    <input type="number" id="amount" class="border p-2 rounded" placeholder="Monto">
+
+                    <div class="ReciptPicture border p-2 rounded" id="category">
+                        <h1 class="upload-icon">
+                        <!-- agrega una imagen del comprobante -->
+                        </h1>
+                        <input
+                            class="file-uploader"
+                            type="file"
+                            onchange="upload()"
+                            accept="image/*"
+                            id="image"
+                         />
+                        </div>
+                    <button type="submit" class="bg-blue-600 text-white p-2 rounded">Agregar Transaccion</button>
+                </div>
+            </form>
+
+            <div id="transactions-list" class="space-y-4">
+                <!-- Aca apareceran las transacciones -->
+              </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+          <p>Desarrollado Por Pedro Reverendo</p>
+      </div>
+  </footer>
+
+    <script src="./js/transactions.js"></script>
+</body>
+</html>

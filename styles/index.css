@@ -1,0 +1,15 @@
+.footer{
+    margin-top: auto;
+    
+    display: flex;
+    justify-content: center;
+
+    padding-block: 15px;
+
+    background-color: #dbeafe;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
